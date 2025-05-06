@@ -1,124 +1,100 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Анкета</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Головна – Кузнецова Марія</title>
   <style>
     body {
-      background-color: #ffe6f0;
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
-    .form-container {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fff0f5;
-      width: 500px;
-      margin: 50px auto;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #f8c8dc;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: #b04175;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       padding: 30px;
-      border: 2px solid #ffc0cb;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+      max-width: 400px;
+      text-align: center;
+      margin: 40px auto;
+    }
+    .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #f8c8dc;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #d36c9c;
+      margin-bottom: 5px;
     }
     h2 {
-      text-align: center;
-      color: #d63384;
+      color: #666;
+      margin-top: 0;
+      font-size: 1.1em;
     }
-    label {
-      display: block;
-      margin: 10px 0 5px;
+    p {
+      color: #444;
+      line-height: 1.6;
+      margin: 10px 0;
     }
-    input[type="text"],
-    input[type="email"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ffb6c1;
-      border-radius: 5px;
-      background-color: #fffafc;
+    a {
+      color: #b04175;
+      text-decoration: none;
     }
-    input[type="submit"],
-    input[type="reset"] {
-      background-color: #ffb6c1;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 15px;
-      margin-right: 10px;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
+    a:hover {
+      text-decoration: underline;
     }
-    input[type="submit"]:hover,
-    input[type="reset"]:hover {
-      background-color: #ff99bb;
+    .footer {
+      margin-top: 25px;
+      font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="form-container">
-    <h2>Анкета користувача</h2>
-    <form action="#" method="post">
-      <label for="name">Ім'я:</label>
-      <input type="text" id="name" name="name" required>
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="about.html">Про мене</a>
+    <a href="contact.html">Контакти</a>
+  </nav>
 
-      <label for="surname">Прізвище:</label>
-      <input type="text" id="surname" name="surname" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label>Стать:</label>
-      <input type="radio" name="gender" value="чоловік"> Чоловік
-      <input type="radio" name="gender" value="жінка"> Жінка
-
-      <label>Дата народження:</label>
-      <select name="day" required>
-        <option value="">День</option>
-        <!-- День 1–31 -->
-        <script>
-          for (let i = 1; i <= 31; i++) {
-            document.write(`<option value="${i}">${i}</option>`);
-          }
-        </script>
-      </select>
-
-      <select name="month" required>
-        <option value="">Місяць</option>
-        <option value="1">Січень</option>
-        <option value="2">Лютий</option>
-        <option value="3">Березень</option>
-        <option value="4">Квітень</option>
-        <option value="5">Травень</option>
-        <option value="6">Червень</option>
-        <option value="7">Липень</option>
-        <option value="8">Серпень</option>
-        <option value="9">Вересень</option>
-        <option value="10">Жовтень</option>
-        <option value="11">Листопад</option>
-        <option value="12">Грудень</option>
-      </select>
-
-      <select name="year" required>
-        <option value="">Рік</option>
-        <!-- Роки від 1950 до 2024 -->
-        <script>
-          for (let y = 2024; y >= 1950; y--) {
-            document.write(`<option value="${y}">${y}</option>`);
-          }
-        </script>
-      </select>
-
-      <label>Улюблені квіти:</label>
-      <input type="checkbox" name="flowers" value="троянда"> Троянда<br>
-      <input type="checkbox" name="flowers" value="ромашка"> Ромашка<br>
-      <input type="checkbox" name="flowers" value="соняшник"> Соняшник<br>
-
-      <label for="comments">Коментарі:</label>
-      <textarea id="comments" name="comments" rows="4"></textarea>
-
-      <input type="submit" value="Надіслати">
-      <input type="reset" value="Очистити">
-    </form>
+  <div class="card">
+    <img src="photo_2025-04-21_22-14-41.jpg" alt="Фото Кузнецової Марії" />
+    <h1>Кузнецова Марія</h1>
+    <h2>Група: П2-21</h2>
+    <p><strong>Курс:</strong> 4-й курс</p>
+    <p><strong>Спеціальність:</strong> Вчитель початкових класів. Інформатика.</p>
+    <p><strong>Навчальний заклад:</strong> 
+      <a href="http://kvnznfpkdor.in.ua/" target="_blank">Нікопольський фаховий педагогічний коледж ДОР</a>
+    </p>
+    <p><strong>Email:</strong> <a href="mailto:eizenrekk248@gmail.com">eizenrekk248@gmail.com</a></p>
+    <p><strong>Телефон:</strong> +380957504028</p>
+    <p><strong>Instagram:</strong> 
+      <a href="https://www.instagram.com/eizenrekk/" target="_blank">@eizenrekk</a>
+    </p>
+    <p><strong>Хобі:</strong> малювання, архітектура, навчання, читання сучасної літератури</p>
+    <div class="footer">
+      &copy; 2025 Кузнецова Марія
+    </div>
   </div>
 </body>
 </html>
